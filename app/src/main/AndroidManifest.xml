@@ -27,6 +27,11 @@
             android:label="Lemmings settings"
             android:screenOrientation="landscape">
         </activity>
+        <activity
+            android:name=".Level"
+            android:label="Lemmings Game level"
+            android:screenOrientation="landscape">
+        </activity>
     </application>
 
 </manifest>
