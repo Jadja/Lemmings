@@ -2,33 +2,35 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/lemmings_background_empty">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Toggle Music"
+        android:text="@string/music"
         android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="79dp" />
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true" />
 
     <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Music"
         android:id="@+id/musicbutton"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:onClick="toggleMusic"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:checked="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Toggle game sounds"
+        android:text="@string/gamesounds"
         android:id="@+id/textView2"
-        android:layout_above="@+id/crashbutton"
+        android:layout_below="@+id/gamesoundbutton"
         android:layout_centerHorizontal="true" />
 
     <ToggleButton
@@ -36,26 +38,42 @@
         android:layout_height="wrap_content"
         android:text="Game sounds"
         android:id="@+id/gamesoundbutton"
+        android:onClick="toggleGamesounds"
         android:layout_below="@+id/textView3"
-        android:layout_alignLeft="@+id/crashbutton"
-        android:layout_alignStart="@+id/crashbutton" />
+        android:layout_alignLeft="@+id/musicbutton"
+        android:layout_alignStart="@+id/musicbutton"
+        android:checked="true"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Toggle crashes"
+        android:text="@string/vibration"
         android:id="@+id/textView3"
-        android:layout_below="@+id/crashbutton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
+        android:layout_alignBottom="@+id/button3"
+        android:layout_centerHorizontal="true" />
 
     <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="crashes"
-        android:id="@+id/crashbutton"
+        android:text="Vibration"
+        android:id="@+id/button"
         android:checked="false"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:onClick="toggleVibrate"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/musicbutton"
+        android:layout_alignStart="@+id/musicbutton"
+        android:layout_marginBottom="39dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu"
+        android:id="@+id/button3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="3dp"
+        android:onClick="doMenu"/>
 </RelativeLayout>

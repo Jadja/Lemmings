@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">Lemmings</string>
-    <string name="Settings">Lemmings settings</string>
-    <string name="Levelselect">Lemmings Level Select</string>
+    <string name="Settings">Settings</string>
+    <string name="Levelselect">Start</string>
+    <string name="menu">Menu</string>
+    <string name="gamesounds">Toggle game sounds</string>
+    <string name="music">Toggle music</string>
+    <string name="vibration">Toggle vibration</string>
 
     <string name="hello_world">Hello world</string>
     <string name="action_settings">Settings</string>
