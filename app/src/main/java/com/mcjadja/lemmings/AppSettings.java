@@ -3,7 +3,13 @@ package com.mcjadja.lemmings;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ToggleButton;
+import android.view.View.OnClickListener;
+import android.widget.Toast;
+
+import java.io.Console;
 
 /**
  * Created by Jadja on 5/19/2015.
@@ -14,11 +20,55 @@ public class AppSettings extends Activity {
     boolean gamesounds = true;
     boolean vibration = false;
 
+    ToggleButton tgbuttonmusic;
+    ToggleButton tgbuttonsound;
+    ToggleButton tgbuttonvibration;
+    private Activity activity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.app_settings);
+
+        activity = this;
+
+        tgbuttonmusic = (ToggleButton) findViewById(R.id.musicbutton);
+        tgbuttonsound = (ToggleButton) findViewById(R.id.gamesoundbutton);
+        tgbuttonvibration = (ToggleButton) findViewById(R.id.vibrationbutton);
+        tgbuttonmusic.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (tgbuttonmusic.isChecked()) {
+                    music = true;
+                } else {
+                    music = false;
+                }
+            }
+        });
+        tgbuttonmusic.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (tgbuttonsound.isChecked()) {
+                    gamesounds = true;
+                } else {
+                    gamesounds = false;
+                }
+            }
+        });
+        tgbuttonmusic.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (tgbuttonvibration.isChecked()) {
+                    vibration = true;
+                } else {
+                    vibration = false;
+                }
+            }
+        });
     }
 
     public void doMenu(View v) {

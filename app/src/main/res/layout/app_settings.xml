@@ -11,7 +11,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/music"
         android:id="@+id/textView"
-        android:layout_above="@+id/button"
+        android:layout_below="@+id/musicbutton"
         android:layout_centerHorizontal="true" />
 
     <ToggleButton
@@ -20,9 +20,9 @@
         android:text="Music"
         android:id="@+id/musicbutton"
         android:onClick="toggleMusic"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:checked="true" />
+        android:checked="true"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,10 +39,12 @@
         android:text="Game sounds"
         android:id="@+id/gamesoundbutton"
         android:onClick="toggleGamesounds"
-        android:layout_below="@+id/textView3"
+        android:checked="true"
         android:layout_alignLeft="@+id/musicbutton"
         android:layout_alignStart="@+id/musicbutton"
-        android:checked="true"/>
+        android:layout_below="@+id/textView3"
+        android:layout_alignRight="@+id/musicbutton"
+        android:layout_alignEnd="@+id/musicbutton" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -50,20 +52,19 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/vibration"
         android:id="@+id/textView3"
-        android:layout_alignBottom="@+id/button3"
+        android:layout_below="@+id/button3"
         android:layout_centerHorizontal="true" />
 
     <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Vibration"
-        android:id="@+id/button"
+        android:id="@+id/vibrationbutton"
         android:checked="false"
         android:onClick="toggleVibrate"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/textView"
         android:layout_alignLeft="@+id/musicbutton"
-        android:layout_alignStart="@+id/musicbutton"
-        android:layout_marginBottom="39dp" />
+        android:layout_alignStart="@+id/musicbutton" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
