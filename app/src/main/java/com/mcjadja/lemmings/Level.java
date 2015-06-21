@@ -24,8 +24,12 @@ public class Level extends BaseGameActivity {
 
     //Constants:
 
+    public static boolean gamesounds = true;
+    public static boolean music = true;
+    public static boolean vibration = false;
+
     private static final int CAMERA_WIDTH = 800;
-    private static final int CAMERA_HEIGHT = 480;
+    private static final int CAMERA_HEIGHT = 520;
 
     //Fields:
 
@@ -58,5 +62,16 @@ public class Level extends BaseGameActivity {
 
     }
 
+    public static void ToggleMusic(boolean musictoggle)  {
+        music = musictoggle;
+    }
+
+    public static void ToggleSound(boolean soundtoggle)  {
+        gamesounds = soundtoggle;
+    }
+
+    public static void ToggleVibration(boolean vibrationtoggle)  {
+        vibration = vibrationtoggle;
+    }
 
 }

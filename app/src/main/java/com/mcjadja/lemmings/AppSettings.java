@@ -36,6 +36,7 @@ public class AppSettings extends Activity {
         tgbuttonmusic = (ToggleButton) findViewById(R.id.musicbutton);
         tgbuttonsound = (ToggleButton) findViewById(R.id.gamesoundbutton);
         tgbuttonvibration = (ToggleButton) findViewById(R.id.vibrationbutton);
+
         tgbuttonmusic.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -47,7 +48,7 @@ public class AppSettings extends Activity {
                 }
             }
         });
-        tgbuttonmusic.setOnClickListener(new OnClickListener() {
+        tgbuttonsound.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -58,7 +59,7 @@ public class AppSettings extends Activity {
                 }
             }
         });
-        tgbuttonmusic.setOnClickListener(new OnClickListener() {
+        tgbuttonvibration.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -82,9 +83,11 @@ public class AppSettings extends Activity {
         //Starting a new Intent
         if (music)    {
             music = false;
+            Level.ToggleMusic(false);
         }
         else    {
             music = true;
+            Level.ToggleMusic(true);
         }
     }
 
@@ -92,9 +95,11 @@ public class AppSettings extends Activity {
         //Starting a new Intent
         if (gamesounds)    {
             gamesounds = false;
+            Level.ToggleSound(false);
         }
         else    {
             gamesounds = true;
+            Level.ToggleSound(true);
         }
     }
 
@@ -102,9 +107,11 @@ public class AppSettings extends Activity {
         //Starting a new Intent
         if (vibration)    {
             vibration = false;
+            Level.ToggleVibration(false);
         }
         else    {
             vibration = true;
+            Level.ToggleVibration(true);
         }
     }
 
