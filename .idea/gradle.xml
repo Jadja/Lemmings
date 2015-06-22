@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/AndEngine" />
+            <option value="$PROJECT_DIR$/AndEngineExamples" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
