@@ -44,7 +44,7 @@ public class BitmapTextureAtlas extends TextureAtlas<IBitmapTextureAtlasSource> 
 	/**
 	 * Uses {@link BitmapTextureFormat#RGBA_8888}.
 	 */
-	public BitmapTextureAtlas(final TextureOptions pTextureManager, final int pWidth, final int pHeight) {
+	public BitmapTextureAtlas(final TextureManager pTextureManager, final int pWidth, final int pHeight) {
 		this(pTextureManager, pWidth, pHeight, BitmapTextureFormat.RGBA_8888);
 	}
 

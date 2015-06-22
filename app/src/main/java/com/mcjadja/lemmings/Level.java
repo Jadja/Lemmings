@@ -80,7 +80,9 @@ public class Level extends SimpleBaseGameActivity implements ButtonSprite.OnClic
 
     @Override
     protected Scene onCreateScene() {
-        return null;
+        final Scene scene = new Scene();
+        scene.setBackground(new Background(1.000f, 0.000f, 0.000f));
+        return scene;
     }
 
     @Override
