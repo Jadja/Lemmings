@@ -27,7 +27,8 @@
             android:label="Lemmings settings"
             android:screenOrientation="landscape">
         </activity>
-        <activity android:name="Level">
+        <activity android:name="Level"
+                android:configChanges="orientation|screenSize">
                 <intent-filter>
                     <action android:name="android.intent.action.MAIN"/>
                     <category android:name="andoid.intent.category.LAUNCHER"/>
